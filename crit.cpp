@@ -60,4 +60,23 @@ int main()
 				cin.ignore(100000, '\n');
 			}
 		}
+	float* sumstr = new float[num];// массив из сумм таблицы по строкам
+	int counter = 0;
+	for (int i = 0; i < num; i++)// инициализация всех элементов массива
+	{
+		sumstr[i] = 0;
+	}
+	for (int i = 0; i < num; i++)// подсчёт сумм всех строк таблицы
+	{
+		for (int i1 = 0; i1 < num; i1++)
+		{
+			sumstr[i] = sumstr[i] + a[i1+(int(num)*counter)];
+		}
+		counter++;
+	}
+	float allsum = 0;
+	for (int i = 0; i < num; i++)// подсчёт суммы всех элементов таблицы
+	{
+		allsum =allsum+sumstr[i];
+	}
 }
