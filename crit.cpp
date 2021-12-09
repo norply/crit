@@ -79,4 +79,9 @@ int main()
 	{
 		allsum =allsum+sumstr[i];
 	}
+	cout.precision(2);
+	for (int i = 0; i < num; i++)// вывод результата
+	{
+		cout << "Весовой коэффициент критерия " <<i+1<<":"<<sumstr[i]/allsum<<endl;
+	}
 }
